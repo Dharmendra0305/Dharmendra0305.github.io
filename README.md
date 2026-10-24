@@ -43,4 +43,8 @@ https://dharmendra0305.github.io/
 
 ---
 
-© Dharmendra Kumar Prasad
+---
+
+© 2026 Dharmendra Kumar Prasad. All rights reserved.
+
+This repository contains the source code for my personal portfolio website.
