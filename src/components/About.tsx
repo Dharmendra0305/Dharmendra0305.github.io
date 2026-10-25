@@ -26,8 +26,12 @@ export default function About() {
         >
           <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-8 sm:p-10">
             <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
-                <span className="font-display text-lg font-bold gradient-text">DK</span>
+              <div className="h-12 w-12 overflow-hidden rounded-full border border-white/15 bg-white/10 p-0.5 shadow-lg shadow-cyan-500/10 backdrop-blur-xl">
+                <img
+                  src={personal.profilePhotoUrl}
+                  alt={`${personal.name} professional portrait`}
+                  className="h-full w-full rounded-full object-contain"
+                />
               </div>
               <div>
                 <h3 className="font-display text-lg font-bold text-white">{personal.name}</h3>

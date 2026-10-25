@@ -115,6 +115,22 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: Content */}
           <div className="flex flex-col items-start">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="relative mb-6 h-28 w-28 rounded-full p-1 shadow-xl shadow-cyan-500/15 sm:h-32 sm:w-32"
+            >
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-cyan-500/25 to-blue-500/20 blur-xl" />
+              <div className="relative h-full w-full overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-xl">
+                <img
+                  src={personal.profilePhotoUrl}
+                  alt={`${personal.name} professional portrait`}
+                  className="h-full w-full rounded-full object-contain"
+                />
+              </div>
+            </motion.div>
+
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -184,7 +200,7 @@ export default function Hero() {
             >
               <a
                 href={personal.resumeUrl}
-                download="Resume_Dharmendra.pdf"
+                download="Dharmendra_Kumar_Prasad_Resume.pdf"
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all hover:shadow-xl hover:shadow-cyan-500/30 hover:brightness-110"
               >
                 <FileText className="h-4 w-4" />
