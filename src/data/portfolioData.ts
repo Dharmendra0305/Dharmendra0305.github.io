@@ -6,7 +6,7 @@ export const personal = {
   role: 'Java Full Stack Developer | Generative AI & Machine Learning Enthusiast',
   tagline: 'Java Full Stack Developer | Generative AI & ML Enthusiast',
   headline: 'I build scalable backends\nand intelligent applications.',
-  subheadline: 'Java Full Stack Developer specializing in Java, backend engineering, and AI/ML integration.',
+  subheadline: 'Java Full Stack Developer specializing in Java, backend engineering and AI/ML integration.',
   roles: [
     'Java Full Stack Developer',
     'Generative AI Enthusiast',
@@ -23,8 +23,8 @@ export const personal = {
   university: 'Siksha O Anusandhan University',
   year: 'B.Tech CSE · Graduating 2027',
   cgpa: '8.71',
-  bio: `I am a Computer Science and Engineering undergraduate at Siksha O Anusandhan University with hands-on internship experience in software development and machine learning. I specialize in Java development, backend engineering, and AI-powered applications. Passionate about solving real-world problems through software, I continuously explore full-stack development, generative AI and emerging technologies.`,
-  aboutLong: `My approach is simple — build from the backend forward. Clean architecture, well-designed APIs, and reliable data models form the foundation. Then I layer on intuitive, responsive interfaces that make the whole experience seamless. Whether it's a Java backend handling complex business logic or a Gradio interface serving AI models in real time, I care about the details that make software feel effortless.`,
+  bio: `I am a Computer Science and Engineering undergraduate at Siksha O Anusandhan University with hands-on internship experience in software development and machine learning. I specialize in Java development, backend engineering and AI-powered applications. Passionate about solving real-world problems through software, I continuously explore full-stack development, generative AI and emerging technologies.`,
+  aboutLong: `My approach is simple — build from the backend forward. Clean architecture, well-designed APIs and reliable data models form the foundation. Then I layer on intuitive, responsive interfaces that make the whole experience seamless. Whether it's a Java backend handling complex business logic or a Gradio interface serving AI models in real time, I care about the details that make software feel effortless.`,
 };
 
 export const stats = [
@@ -40,10 +40,9 @@ export const skillCategories = [
     icon: 'Server',
     color: 'emerald',
     skills: [
-      { name: 'Java', level: 90 },
-      { name: 'OOP', level: 85 },
-      { name: 'REST APIs', level: 80 },
-      { name: 'Java Swing', level: 78 },
+      { name: 'Java', level: 70 },
+      { name: 'Spring Boot', level: 70 },
+      { name: 'REST APIs', level: 70 },
     ],
   },
   {
@@ -51,10 +50,9 @@ export const skillCategories = [
     icon: 'Monitor',
     color: 'blue',
     skills: [
-      { name: 'HTML5', level: 80 },
-      { name: 'CSS3', level: 78 },
-      { name: 'Gradio UI', level: 80 },
-      { name: 'Java Swing GUI', level: 82 },
+      { name: 'React', level: 70 },
+      { name: 'JavaScript', level: 70 },
+      { name: 'HTML / CSS', level: 70 },
     ],
   },
   {
@@ -62,8 +60,7 @@ export const skillCategories = [
     icon: 'Database',
     color: 'cyan',
     skills: [
-      { name: 'SQL', level: 82 },
-      { name: 'MySQL', level: 82 },
+      { name: 'SQL / MySQL', level: 70 },
     ],
   },
   {
@@ -71,11 +68,9 @@ export const skillCategories = [
     icon: 'BrainCircuit',
     color: 'amber',
     skills: [
-      { name: 'Python', level: 85 },
-      { name: 'PyTorch', level: 78 },
-      { name: 'TensorFlow', level: 75 },
-      { name: 'Stable Diffusion', level: 80 },
-      { name: 'GANs', level: 72 },
+      { name: 'Python', level: 70 },
+      { name: 'Machine Learning', level: 45 },
+      { name: 'Generative AI', level: 45 },
     ],
   },
   {
@@ -83,11 +78,7 @@ export const skillCategories = [
     icon: 'Wrench',
     color: 'rose',
     skills: [
-      { name: 'Git', level: 85 },
-      { name: 'GitHub', level: 85 },
-      { name: 'Maven', level: 78 },
-      { name: 'Gradio', level: 80 },
-      { name: 'Jsoup', level: 75 },
+      { name: 'Git / GitHub', level: 70 },
     ],
   },
 ];
@@ -96,9 +87,9 @@ export const projects = [
   {
     title: 'Text-to-Image Generator',
     description:
-      'A generative AI web application using Stable Diffusion v1.5 running on Google Colab T4 GPU. Implemented advanced controls including negative prompts, CFG tuning, and inference customization through a Gradio interface.',
+      'A generative AI web application using Stable Diffusion v1.5 running on Google Colab T4 GPU. Implemented advanced controls including negative prompts, CFG tuning and inference customization through a Gradio interface.',
     tags: ['Stable Diffusion', 'PyTorch', 'Gradio', 'Python', 'Generative AI'],
-    github: 'https://github.com/Dharmendra0305',
+    github: 'https://github.com/Dharmendra0305/PRODIGY_GA_02',
     demo: '#',
     featured: true,
     gradient: 'from-violet-500/20 to-fuchsia-500/20',
@@ -116,7 +107,7 @@ export const projects = [
     description:
       'A Conditional GAN using U-Net Generator and PatchGAN Discriminator to translate satellite imagery into map layouts. Deployed browser-based inference using Gradio for real-time image translation.',
     tags: ['TensorFlow', 'Pix2Pix', 'GANs', 'Computer Vision', 'Python', 'Gradio'],
-    github: 'https://github.com/Dharmendra0305',
+    github: 'https://github.com/Dharmendra0305/PRODIGY_GA_04',
     demo: '#',
     featured: true,
     gradient: 'from-cyan-500/20 to-blue-500/20',
@@ -132,9 +123,9 @@ export const projects = [
   {
     title: 'Flight Booking System',
     description:
-      'A desktop-based flight reservation system built with Java Swing and MySQL. Features seat selection, booking workflows, an admin panel, and full CRUD operations for flight management.',
+      'A desktop-based flight reservation system built with Java Swing and MySQL. Features seat selection, booking workflows, an admin panel and full CRUD operations for flight management.',
     tags: ['Java', 'MySQL', 'Swing'],
-    github: 'https://github.com/Dharmendra0305',
+    github: 'https://github.com/Dharmendra0305/Flight-Booking-System',
     demo: '#',
     featured: false,
     gradient: 'from-blue-500/20 to-emerald-500/20',
@@ -152,7 +143,7 @@ export const projects = [
     description:
       'A GUI-based scraper built with Java Swing and Jsoup that extracts live product information from e-commerce sites. Handles network failures gracefully and exports structured CSV files.',
     tags: ['Java', 'Java Swing', 'Jsoup', 'Maven', 'CSV'],
-    github: 'https://github.com/Dharmendra0305',
+    github: 'https://github.com/Dharmendra0305/SCT_SD_4',
     demo: '#',
     featured: false,
     gradient: 'from-amber-500/20 to-orange-500/20',
@@ -229,7 +220,7 @@ export const whyHireMe = [
     icon: 'Zap',
     title: 'Strong Backend Foundation',
     description:
-      'Deep understanding of Java, OOP principles, and backend architecture. I build systems that are scalable, secure, and maintainable from day one.',
+      'Deep understanding of Java, OOP principles and backend architecture. I build systems that are scalable, secure and maintainable from day one.',
   },
   {
     icon: 'Brain',
@@ -247,19 +238,19 @@ export const whyHireMe = [
     icon: 'TrendingUp',
     title: 'Proven Academic Record',
     description:
-      'CGPA of 8.71 at Siksha O Anusandhan University. Consistent academic performance reflects discipline, focus, and a strong grasp of fundamentals.',
+      'CGPA of 8.71 at Siksha O Anusandhan University. Consistent academic performance reflects discipline, focus and a strong grasp of fundamentals.',
   },
   {
     icon: 'Users',
     title: 'Collaborative Mindset',
     description:
-      'Multiple internship experiences working across teams and technologies. I communicate clearly, collaborate effectively, and adapt quickly to new development environments.',
+      'Multiple internship experiences working across teams and technologies. I communicate clearly, collaborate effectively and adapt quickly to new development environments.',
   },
   {
     icon: 'Rocket',
     title: 'Eager to Learn',
     description:
-      'Constantly exploring new technologies and building projects. I bring curiosity, adaptability, and a growth mindset to every opportunity.',
+      'Constantly exploring new technologies and building projects. I bring curiosity, adaptability and a growth mindset to every opportunity.',
   },
 ];
 

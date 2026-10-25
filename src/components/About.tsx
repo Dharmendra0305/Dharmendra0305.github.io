@@ -78,7 +78,7 @@ export default function About() {
               <h3 className="font-display text-xl font-bold text-white">My Approach</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-400 text-pretty">
                 Great software starts with a solid backend. Clean architecture, well-designed
-                APIs, and reliable data models are the foundation — then I layer on intuitive,
+                APIs and reliable data models are the foundation — then I layer on intuitive,
                 responsive interfaces that make the experience seamless.
               </p>
             </div>

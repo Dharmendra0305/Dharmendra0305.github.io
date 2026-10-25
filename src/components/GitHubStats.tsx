@@ -40,7 +40,7 @@ export default function GitHubStats() {
 
           <p className="mt-4 text-sm leading-relaxed text-slate-400 text-pretty">
             Explore my open-source projects spanning generative AI, computer vision, Java
-            application development, and data extraction tools. Each repository reflects
+            application development and data extraction tools. Each repository reflects
             hands-on work from internships and self-driven learning.
           </p>
 

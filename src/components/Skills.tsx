@@ -13,10 +13,8 @@ const colorMap: Record<string, { gradient: string; text: string; bg: string; bor
 };
 
 function proficiencyLabel(level: number): string {
-  if (level >= 88) return 'Expert';
-  if (level >= 78) return 'Advanced';
   if (level >= 65) return 'Intermediate';
-  return 'Learning';
+  return 'Beginner';
 }
 
 export default function Skills() {

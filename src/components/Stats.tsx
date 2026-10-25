@@ -6,21 +6,29 @@ import { useCountUp } from '@/hooks/useCountUp';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
+const cardLinks: Record<string, string> = {
+  'Projects Built': '#projects',
+  'Certifications': '#certifications',
+  'Internships': '#experience',
+};
+
 function StatCard({ stat, index }: { stat: typeof stats[number]; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-50px' });
   const countRef = useCountUp(stat.value, 2000, inView);
   const Icon = getIcon(stat.icon, Award);
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-      className="card-hover group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-6 text-center hover:border-cyan-500/20 sm:p-8"
-    >
+  const target = cardLinks[stat.label];
+  const isClickable = Boolean(target);
+
+  const handleNavigate = (e: React.MouseEvent) => {
+    if (!target) return;
+    e.preventDefault();
+    document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const inner = (
+    <>
       <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br from-cyan-500/5 to-blue-500/5 blur-2xl transition-all duration-500 group-hover:scale-150" />
 
       <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/15 to-blue-500/15 transition-transform group-hover:scale-110">
@@ -33,6 +41,31 @@ function StatCard({ stat, index }: { stat: typeof stats[number]; index: number }
       </div>
 
       <p className="mt-2 text-xs font-medium text-slate-400 sm:text-sm">{stat.label}</p>
+    </>
+  );
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {isClickable ? (
+        <a
+          href={target}
+          onClick={handleNavigate}
+          aria-label={`${stat.label} — view section`}
+          className="card-hover group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-6 text-center transition-all hover:-translate-y-1 hover:border-cyan-500/30 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-cyan-500/10 sm:p-8"
+        >
+          {inner}
+        </a>
+      ) : (
+        <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-6 text-center sm:p-8">
+          {inner}
+        </div>
+      )}
     </motion.div>
   );
 }
