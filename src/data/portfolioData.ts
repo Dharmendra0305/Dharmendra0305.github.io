@@ -74,11 +74,18 @@ export const skillCategories = [
     ],
   },
   {
-    category: 'Tools',
+    category: 'Tools & Platforms',
     icon: 'Wrench',
     color: 'rose',
     skills: [
-      { name: 'Git / GitHub', level: 70 },
+      { name: 'VS Code', level: 70 },
+      { name: 'IntelliJ IDEA', level: 70 },
+      { name: 'Git', level: 70 },
+      { name: 'GitHub', level: 70 },
+      { name: 'Maven', level: 70 },
+      { name: 'Postman', level: 70 },
+      { name: 'Google Colab', level: 70 },
+      { name: 'Jupyter Notebook', level: 70 },
     ],
   },
 ];
