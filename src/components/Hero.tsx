@@ -115,22 +115,6 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: Content */}
           <div className="flex flex-col items-start">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="relative mb-6 h-28 w-28 rounded-full p-1 shadow-xl shadow-cyan-500/15 sm:h-32 sm:w-32"
-            >
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-cyan-500/25 to-blue-500/20 blur-xl" />
-              <div className="relative h-full w-full overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-xl">
-                <img
-                  src={personal.profilePhotoUrl}
-                  alt={`${personal.name} professional portrait`}
-                  className="h-full w-full rounded-full object-contain"
-                />
-              </div>
-            </motion.div>
-
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -257,9 +241,26 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: Code window */}
-          <div className="hidden lg:block">
-            <CodeWindow />
+          {/* Right: Profile photo and code window */}
+          <div className="relative flex justify-center lg:block">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="relative z-10 h-32 w-32 rounded-full p-1 shadow-xl shadow-cyan-500/15 sm:h-36 sm:w-36 lg:absolute lg:-right-4 lg:-top-12"
+            >
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-cyan-500/25 to-blue-500/20 blur-xl" />
+              <div className="relative h-full w-full overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-xl">
+                <img
+                  src={personal.profilePhotoUrl}
+                  alt={`${personal.name} professional portrait`}
+                  className="h-full w-full rounded-full object-contain"
+                />
+              </div>
+            </motion.div>
+            <div className="mt-8 hidden lg:block">
+              <CodeWindow />
+            </div>
           </div>
         </div>
 
