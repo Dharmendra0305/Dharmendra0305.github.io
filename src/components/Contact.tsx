@@ -1,11 +1,26 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Github, Linkedin, Phone, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Phone, ArrowUpRight, CheckCircle2, Loader2, AlertCircle, type LucideIcon } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import Section, { SectionHeading } from './Section';
 import { personal } from '@/data/portfolioData';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
+
+type ProfessionalLink = {
+  name: string;
+  handle: string;
+  href: string;
+  icon?: LucideIcon;
+  mark?: string;
+};
+
+const professionalLinks: ProfessionalLink[] = [
+  { name: 'GitHub', handle: 'Dharmendra0305', href: personal.github, icon: Github },
+  { name: 'LinkedIn', handle: 'dharmendrakumar03', href: personal.linkedin, icon: Linkedin },
+  { name: 'LeetCode', handle: 'dharmendrakumar03', href: 'https://leetcode.com/u/dharmendrakumar03/', mark: 'LC' },
+  { name: 'HackerRank', handle: 'dharmendra_kp03', href: 'https://www.hackerrank.com/profile/dharmendra_kp03', mark: 'HR' },
+];
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -48,7 +63,7 @@ export default function Contact() {
 
   return (
     <Section id="contact">
-      <SectionHeading title="Contact" subtitle="Get In Touch" />
+      <SectionHeading title="Contact & Professional Presence" subtitle="Let's Connect" />
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Left: Info */}
@@ -95,32 +110,31 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-8 flex gap-3 border-t border-white/5 pt-6">
-            <a
-              href={personal.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/5 bg-white/[0.03] text-slate-300 transition-all hover:scale-105 hover:border-white/15 hover:text-white"
-              aria-label="GitHub"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a
-              href={personal.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/5 bg-white/[0.03] text-slate-300 transition-all hover:scale-105 hover:border-white/15 hover:text-white"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href={`mailto:${personal.email}`}
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/5 bg-white/[0.03] text-slate-300 transition-all hover:scale-105 hover:border-white/15 hover:text-white"
-              aria-label="Email"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
+          <div className="mt-8 border-t border-white/5 pt-6">
+            <p className="mb-4 font-mono text-[10px] uppercase tracking-wider text-slate-500">Professional Presence</p>
+            <div className="grid grid-cols-2 gap-2">
+              {professionalLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2 rounded-xl border border-white/5 bg-white/[0.03] px-3 py-2.5 transition-colors hover:border-cyan-500/25 hover:bg-white/[0.06]"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/[0.04] text-cyan-400">
+                      {Icon ? <Icon className="h-4 w-4" /> : <span className="font-mono text-[10px] font-bold">{link.mark}</span>}
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-xs font-semibold text-white">{link.name}</span>
+                      <span className="block truncate font-mono text-[9px] text-slate-500">@{link.handle}</span>
+                    </span>
+                    <ArrowUpRight className="ml-auto h-3.5 w-3.5 shrink-0 text-slate-600 transition-colors group-hover:text-cyan-400" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </motion.div>
 

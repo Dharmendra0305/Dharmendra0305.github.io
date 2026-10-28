@@ -30,8 +30,8 @@ function ProjectCard({ project, index }: { project: typeof projects[number]; ind
         />
 
         {/* Gradient tint overlay for visual consistency */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} mix-blend-overlay opacity-60`} />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`} />
+        <div className="project-image-shade absolute inset-0" />
 
         {/* Browser chrome category label */}
         <div className="absolute left-4 right-4 top-4 flex items-center gap-2 rounded-lg border border-white/10 bg-slate-900/60 px-3 py-2 backdrop-blur">

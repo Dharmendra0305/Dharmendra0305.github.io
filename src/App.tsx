@@ -8,8 +8,6 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Experience from '@/components/Experience';
 import Certifications from '@/components/Certifications';
-import GitHubStats from '@/components/GitHubStats';
-import ProfessionalPresence from '@/components/ProfessionalPresence';
 import WhyHireMe from '@/components/WhyHireMe';
 import Contact from '@/components/Contact';
 import Footer, { BackToTop } from '@/components/Footer';
@@ -29,8 +27,6 @@ function App() {
           <Projects />
           <Experience />
           <Certifications />
-          <GitHubStats />
-          <ProfessionalPresence />
           <WhyHireMe />
           <Contact />
         </main>

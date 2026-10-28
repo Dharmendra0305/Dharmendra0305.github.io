@@ -39,12 +39,13 @@ export default function About() {
               </div>
             </div>
 
-            <p className="text-base leading-relaxed text-slate-300 text-pretty sm:text-lg">
-              {personal.bio}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-slate-400 text-pretty">
-              {personal.aboutLong}
-            </p>
+            <div className="space-y-4 text-pretty">
+              {personal.bio.split('\n\n').map((paragraph) => (
+                <p key={paragraph} className="text-base leading-relaxed text-slate-300 sm:text-lg">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {highlights.map((item, i) => (

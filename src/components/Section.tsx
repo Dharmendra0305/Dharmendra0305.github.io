@@ -9,7 +9,7 @@ interface SectionProps {
 
 export default function Section({ id, children, className = '' }: SectionProps) {
   return (
-    <section id={id} className={`relative py-24 sm:py-32 ${className}`}>
+    <section id={id} className={`relative py-16 sm:py-24 ${className}`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
@@ -28,7 +28,7 @@ export function SectionHeading({ title, subtitle, center = true }: SectionHeadin
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className={`mb-14 sm:mb-20 ${center ? 'text-center' : ''}`}
+      className={`mb-10 sm:mb-14 ${center ? 'text-center' : ''}`}
     >
       <div className={`mb-5 inline-flex items-center gap-2 rounded-full border border-white/5 bg-white/[0.03] px-4 py-1.5`}>
         <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse-glow" />

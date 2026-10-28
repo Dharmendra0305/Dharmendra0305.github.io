@@ -24,8 +24,7 @@ export const personal = {
   university: 'Siksha O Anusandhan University',
   year: 'B.Tech CSE · Graduating 2027',
   cgpa: '8.71',
-  bio: `I am a Computer Science and Engineering undergraduate at Siksha O Anusandhan University with hands-on internship experience in software development and machine learning. I specialize in Java development, backend engineering and AI-powered applications. Passionate about solving real-world problems through software, I continuously explore full-stack development, generative AI and emerging technologies.`,
-  aboutLong: `My approach is simple — build from the backend forward. Clean architecture, well-designed APIs and reliable data models form the foundation. Then I layer on intuitive, responsive interfaces that make the whole experience seamless. Whether it's a Java backend handling complex business logic or a Gradio interface serving AI models in real time, I care about the details that make software feel effortless.`,
+  bio: `I am a Computer Science and Engineering undergraduate passionate about building practical software solutions through continuous learning and hands-on development. My journey includes internship experience in software development, Java development and generative AI along with active participation in technical projects, competitive programming and hackathons.\n\nFrom developing AI-powered applications to creating Java-based systems and full-stack solutions, I enjoy exploring how technology can solve real-world problems. I am particularly interested in backend engineering, full-stack development, generative AI and machine learning.\n\nBeyond academics, I continuously strengthen my problem-solving abilities, explore emerging technologies and seek opportunities to collaborate on impactful projects that contribute to professional growth and technical excellence.`,
 };
 
 export const stats = [
@@ -104,9 +103,9 @@ export const projects = [
     category: 'Generative AI',
     image: 'https://images.pexels.com/photos/17485738/pexels-photo-17485738.png?auto=compress&cs=tinysrgb&h=650&w=940',
     highlights: [
-      'Stable Diffusion v1.5 on Colab T4 GPU',
+      'Stable Diffusion v1.5 with PyTorch',
+      'Google Colab T4 GPU deployment',
       'Negative prompts & CFG scale tuning',
-      'Customizable inference steps & guidance',
       'Interactive Gradio web interface',
     ],
   },
@@ -122,9 +121,9 @@ export const projects = [
     category: 'Computer Vision',
     image: 'https://images.pexels.com/photos/30596226/pexels-photo-30596226.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     highlights: [
+      'Conditional GAN with Pix2Pix',
       'U-Net Generator + PatchGAN Discriminator',
-      'Satellite-to-map image translation',
-      'Conditional GAN architecture',
+      'TensorFlow computer vision pipeline',
       'Browser-based Gradio inference',
     ],
   },
@@ -140,10 +139,10 @@ export const projects = [
     category: 'Desktop Application',
     image: 'https://images.pexels.com/photos/69866/pexels-photo-69866.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     highlights: [
-      'Interactive seat selection UI',
+      'Java Swing desktop application',
+      'MySQL database integration',
       'Complete booking workflow',
       'Admin panel with CRUD operations',
-      'MySQL database integration',
     ],
   },
   {
@@ -158,7 +157,7 @@ export const projects = [
     category: 'Data Extraction',
     image: 'https://images.pexels.com/photos/5380618/pexels-photo-5380618.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     highlights: [
-      'Live product data extraction',
+      'Java and Jsoup data extraction',
       'Robust network failure handling',
       'Structured CSV export',
       'Maven-managed dependencies',
