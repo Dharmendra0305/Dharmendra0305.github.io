@@ -161,7 +161,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-5 max-w-lg text-sm leading-relaxed text-slate-400 sm:text-base text-pretty"
             >
-              {personal.bio}
+              {personal.heroDescription}
             </motion.p>
 
             {/* Location */}

@@ -25,6 +25,7 @@ export const personal = {
   year: 'B.Tech CSE · Graduating 2027',
   cgpa: '8.71',
   bio: `I am a Computer Science and Engineering undergraduate passionate about building practical software solutions through continuous learning and hands-on development. My journey includes internship experience in software development, Java development and generative AI along with active participation in technical projects, competitive programming and hackathons.\n\nFrom developing AI-powered applications to creating Java-based systems and full-stack solutions, I enjoy exploring how technology can solve real-world problems. I am particularly interested in backend engineering, full-stack development, generative AI and machine learning.\n\nBeyond academics, I continuously strengthen my problem-solving abilities, explore emerging technologies and seek opportunities to collaborate on impactful projects that contribute to professional growth and technical excellence.`,
+  heroDescription: `I am a Computer Science and Engineering undergraduate at Siksha O Anusandhan University with hands-on internship experience in software development and machine learning. I specialize in Java development, backend engineering and AI-powered applications. Passionate about solving real-world problems through software, I continuously explore full-stack development, generative AI and emerging technologies.`,
 };
 
 export const stats = [

@@ -241,6 +241,10 @@ html.light .bg-gradient-to-br.text-white {
   color: #ffffff !important;
 }
 
+html.light #contact a.text-white {
+  color: #0f172a !important;
+}
+
 html.light .text-slate-200,
 html.light .text-slate-300 {
   color: #334155 !important;
